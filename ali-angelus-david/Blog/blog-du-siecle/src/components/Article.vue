@@ -1,16 +1,16 @@
 <template>
     <div>
-            {{ article.title }}
-        <br>{{ article.body }}
-        <br>{{ article.author }}
+        <table>
+        <tr>{{ article.title }}</tr>
+        <tr>{{ article.body }}</tr>
+        <tr>{{ article.author }}</tr>
         
-        <br> <div v-for="commentaire in article.comment" :key="commentaire.title">
-        <br>{{commentaire.title}}
-        <br>
-        <br>{{commentaire.body}}
-        <br>
+         <div v-for="commentaire in article.comment" :key="commentaire.title">
+            <tr>{{commentaire.title}}</tr>
+        <tr>{{commentaire.body}}</tr>
+        
         </div>
-       <br>
+        </table>
     </div>
 </template>
 
@@ -19,5 +19,4 @@ export default {
     props: 
         ['article','comment']
 };
-
 </script>
