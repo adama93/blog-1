@@ -1,6 +1,8 @@
 <template>
 <div>
-    <h1>Hello adama!</h1>
+    <h1>Hello adama! je viens de push </h1>
+    <h2>ali </h2>
+
     <div v-for="article in articles" :key ="article.title">
         
         <Article :article='article'/>
